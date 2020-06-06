@@ -7,7 +7,8 @@ Udacity is invested in creating bonding experiences for its employees and studen
 All backend code follows PEP8 style guidelines.
 
 # Getting Started
-- Pre - requisites and Local Development
+Pre - requisites and Local Development
+
 Developers using this project should already have Python3, pip and node installed on their local machines. Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
 **Virtual Environment**
@@ -75,7 +76,7 @@ The API will return two error types when requests fail:
 
 **GET "/categories"**
 - Returns a list of categories objects, success value and total number of categories
-- Sample: >curl http://127.0.0.1:5000/categories/
+- Sample: ``curl http://127.0.0.1:5000/categories/``
 
 ``	{
   "categories": {
