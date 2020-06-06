@@ -119,135 +119,154 @@ The API will return two error types when requests fail:
 - Sample: `curl http://127.0.0.1:5000/questions/?page=1`
 
 ``{
+
   "categories": {
+  
     "1": "Science",
+    
     "2": "Art",
+    
     "3": "Geography",
+    
     "4": "History",
+    
     "5": "Entertainment",
+    
     "6": "Sports"
+    
   },
+  
   "current_category": null,
+  
   "questions": [
+  
     {
+    
       "answer": "Maya Angelou",
+      
       "category": "4",
+      
       "difficulty": 2,
+      
       "id": 5,
+      
       "question": "Whose autobiography is entitled 'I Know Why the Caged Bird Sings'?"
+      
     },
-    {
-      "answer": "Muhammad Ali",
-      "category": "4",
-      "difficulty": 1,
-      "id": 9,
-      "question": "What boxer's original name is Cassius Clay?"
-    },
-    {
-      "answer": "Apollo 13",
-      "category": "5",
-      "difficulty": 4,
-      "id": 2,
-      "question": "What movie earned Tom Hanks his third straight Oscar nomination, in 1996?"
-    },
-    {
-      "answer": "Tom Cruise",
-      "category": "5",
-      "difficulty": 4,
-      "id": 4,
-      "question": "What actor did author Anne Rice first denounce, then praise in the role of her beloved Lestat?"
-    },
-    {
-      "answer": "Edward Scissorhands",
-      "category": "5",
-      "difficulty": 3,
-      "id": 6,
+    
+   
   "success": true,
+  
   "total_questions": 23
+  
 }
+
 ``
+
 **POST “/questions”**
+
 - Creates a new question using submitted question, answer, difficulty and category, Returns the id of the created question, success value, total questions, and question list based on current page number to update the frontend
+
 - Sample: ``curl X POST -H "Content-Type: application/json" -d '{"question": "Who won the Golden Boot at the 2018 World Cup?", "answer": "Harry Kane", "difficulty":"2", "category":"6"}' http://127.0.0.1:5000/questions/``
 
-``{
+`{
+
 “questions”: {
+
 	“id” : “23”
+	
 	“question” : "Who won the Golden Boot at the 2018 World Cup?"
+	
 	“Answer”: “Harry Kane”
+	
 	"Difficulty":"2"
+	
 	"category":"6"
+	
  	 "success": true
+	 
 }
-}
-``
+
+}`
+
 
 **GET “/categories/<int:category_id>/questions”**
+
 - Returns a list of questions within a specific category
 - Sample: ``curl -X GET http://127.0.0.1:5000/categories/6/questions``
 
-``{
+`{
+
   "current_category": 6,
+  
   "question": [
+  
     {
+    
       "answer": "Brazil",
+      
       "category": "6",
+      
       "difficulty": 3,
+      
       "id": 10,
+      
       "question": "Which is the only team to play in every soccer World Cup tournament?"
+      
     },
+    
     {
+    
       "answer": "Uruguay",
+      
       "category": "6",
+      
       "difficulty": 4,
+      
       "id": 11,
+      
       "question": "Which country won the first ever soccer World Cup in 1930?"
-    },
-    {
-      "answer": "20",
-      "category": "6",
-      "difficulty": 3,
-      "id": 24,
-      "question": "How many teams are there in the Premier League"
-    },
-    {
-      "answer": "3",
-      "category": "6",
-      "difficulty": 2,
-      "id": 25,
-      "question": "How many Premier League cups has Arsenal won?"
-    },
-    {
-      "answer": "Harry Kane",
-      "category": "6",
-      "difficulty": 2,
-      "id": 26,
-      "question": "Who won the Golden Boot at the 2018 World Cup?"
+    
     },
 
   ],
+  
   "success": true,
+  
   "total_questions": 6
-}
-``
+}`
+
 **DELETE ‘'/questions/<int:question_id>'**
+
 - Deletes a question from the database,**
 - Sample: ``curl -X DELETE http://127.0.0.1:5000/questions/28``
 
-``{
+`{
   "deleted": 28,
+  
   "success": true
+  
 }
 
 POST “/quizzes/
-Initiates the quiz, getting a list of categories, questions and enables users to submit answers
-{
+
+- Initiates the quiz, getting a list of categories, questions and enables users to submit answers
+
+`{
+
   "question": {
+  
     "id": 28,
+    
     "question": "",
+    
     "answer": "",
+    
     "category": 6,
+    
     "difficulty": 2
+    
   }
-}
-``
+  
+}`
+
