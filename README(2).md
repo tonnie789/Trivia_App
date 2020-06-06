@@ -7,14 +7,16 @@ Udacity is invested in creating bonding experiences for its employees and studen
 All backend code follows PEP8 style guidelines.
 
 # Getting Started
-Pre - requisites and Local Development
+**Pre - requisites and Local Development**
 
 Developers using this project should already have Python3, pip and node installed on their local machines. Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
 **Virtual Environment**
+
 Ensure you have a virtual environment set up and running, this keeps your dependencies for each project separate and organised. Instructions for setting up a virtual environment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
 
 **PIP Dependencies**
+
 Once you have your virtual environment setup and running, install dependencies by navigating to the `/backend` directory and running:
 
 `bash
@@ -54,10 +56,10 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application.
 
 **Test**
-1. `dropdb trivia_test
+1. dropdb trivia_test
 2. createdb trivia_test
 3. psql trivia_test < trivia.psql
-4. python test_flaskr.py`
+4. python test_flaskr.py
 
 #API Reference
 
@@ -67,7 +69,7 @@ Base URL: At present this app can only be run locally and is not hosted as a bas
 
 Errors are returned as JSON objects in the following format:
 
-``({
+`({
         "success": False,
 	
         "error": 404,
@@ -75,7 +77,7 @@ Errors are returned as JSON objects in the following format:
         "message": "Resource Not found"
 	
     }), 404
-``
+`
 
 The API will return two error types when requests fail:
 - 404: Resources Not Found
@@ -86,7 +88,7 @@ The API will return two error types when requests fail:
 - Returns a list of categories objects, success value and total number of categories
 - Sample: ``curl http://127.0.0.1:5000/categories/``
 
-``	{
+`	{
 
   "categories": {
   
@@ -109,7 +111,7 @@ The API will return two error types when requests fail:
   "total_categories": 6
   
 }
-``
+`
 
 **GET "/questions"***
 - Returns a list of questions, objects, success value and total number of  questions
