@@ -23,9 +23,9 @@ pip install -r requirements.txt
 This will install all of the required packages we selected within the `requirements.txt` file.
 
 Key Dependencies
-[Flask](http://flask.pocoo.org/) is a lightweight backend microservices framework. Flask is required to handle requests and responses.
-[SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM you'll use to handle the lightweight sqlite database. 
-[Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
+- [Flask](http://flask.pocoo.org/) is a lightweight backend microservices framework. Flask is required to handle requests and responses.
+- [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM you'll use to handle the lightweight sqlite database. 
+- [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
 
 Database Setup
 Install and setup “PostgreSQL” on the system and create a database named ‘trivia’ in the Postgres server:
