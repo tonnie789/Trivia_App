@@ -8,7 +8,7 @@ All backend code follows PEP8 style guidelines.
 
 Getting Started
 Pre- requisites and Local Development
-Developers using this project should already have Python3, pip and node installed on their local machines. Follow instructions to install the latest version of python for your platform in the [python docs] https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python
+Developers using this project should already have Python3, pip and node installed on their local machines. Follow instructions to install the latest version of python for your platform in the [python docs] (https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
 Virtual Environment
 Ensure you have a virtual environment set up and running, this keeps your dependencies for each project separate and organised. Instructions for setting up a virtual environment for your platform can be found in the [python docs]https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/.
