@@ -40,6 +40,7 @@ psql trivia < trivia.psql`
 
 
 **Running the server**
+
 From within the `backend` directory, first ensure you are working using your created virtual environment.
 
 To run the server, execute:
@@ -49,24 +50,30 @@ To run the server, execute:
 3. flask run
 
 Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
+
 Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application.
 
 **Test**
-`dropdb trivia_test
-createdb trivia_test
-psql trivia_test < trivia.psql
-python test_flaskr.py`
+1. `dropdb trivia_test
+2. createdb trivia_test
+3. psql trivia_test < trivia.psql
+4. python test_flaskr.py`
 
 #API Reference
+
 Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, http://127.0.0.1:5000/ , which is set as a proxy in the frontend configuration.
 
 **Error Handling**
+
 Errors are returned as JSON objects in the following format:
 
 ``({
         "success": False,
+	
         "error": 404,
+	
         "message": "Resource Not found"
+	
     }), 404
 ``
 
@@ -75,20 +82,32 @@ The API will return two error types when requests fail:
 - 422: Not Processable
 
 **GET "/categories"**
+
 - Returns a list of categories objects, success value and total number of categories
 - Sample: ``curl http://127.0.0.1:5000/categories/``
 
 ``	{
+
   "categories": {
+  
     "1": "Science",
+    
     "2": "Art",
+    
     "3": "Geography",
+    
     "4": "History",
+    
     "5": "Entertainment",
+    
     "6": "Sports"
+    
   },
+  
   "success": true,
+  
   "total_categories": 6
+  
 }
 ``
 
