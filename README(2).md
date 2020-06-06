@@ -1,13 +1,13 @@
 # Full Stack API Final Project
 
-#Introduction
+# Introduction
 
 Udacity is invested in creating bonding experiences for its employees and students. A bunch of team members got the idea to hold trivia on a regular basis and created a webpage to manage the trivia app and play the game. The aim of the project was to create an API that will allow Udacity employees to play the trivia game so they can test their knowledge in a range of topics.
 
 All backend code follows PEP8 style guidelines.
 
-#Getting Started
-Pre- requisites and Local Development
+# Getting Started
+- Pre - requisites and Local Development
 Developers using this project should already have Python3, pip and node installed on their local machines. Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
 **Virtual Environment**
