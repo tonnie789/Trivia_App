@@ -11,7 +11,7 @@ Pre- requisites and Local Development
 Developers using this project should already have Python3, pip and node installed on their local machines. Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
 Virtual Environment
-Ensure you have a virtual environment set up and running, this keeps your dependencies for each project separate and organised. Instructions for setting up a virtual environment for your platform can be found in the [python docs]https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/.
+Ensure you have a virtual environment set up and running, this keeps your dependencies for each project separate and organised. Instructions for setting up a virtual environment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
 PIP Dependencies
 Once you have your virtual environment setup and running, install dependencies by navigating to the `/backend` directory and running:
@@ -23,9 +23,9 @@ pip install -r requirements.txt
 This will install all of the required packages we selected within the `requirements.txt` file.
 
 Key Dependencies
-[Flask]http://flask.pocoo.org/ is a lightweight backend microservices framework. Flask is required to handle requests and responses.
-[SQLAlchemy]https://www.sqlalchemy.org/ is the Python SQL toolkit and ORM you'll use to handle the lightweight sqlite database. 
-[Flask-CORS]https://flask-cors.readthedocs.io/en/latest/#  is the extension we'll use to handle cross origin requests from our frontend server. 
+[Flask](http://flask.pocoo.org/) is a lightweight backend microservices framework. Flask is required to handle requests and responses.
+[SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM you'll use to handle the lightweight sqlite database. 
+[Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
 
 Database Setup
 Install and setup “PostgreSQL” on the system and create a database named ‘trivia’ in the Postgres server:
