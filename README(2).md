@@ -76,8 +76,8 @@ Errors are returned as JSON objects in the following format:
 	
         "message": "Resource Not found"
 	
-    }), 404
-`
+    }), 404`
+
 
 The API will return two error types when requests fail:
 - 404: Resources Not Found
