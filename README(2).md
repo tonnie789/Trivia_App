@@ -1,19 +1,19 @@
 # Full Stack API Final Project
 
-##Introduction
+#Introduction
 
 Udacity is invested in creating bonding experiences for its employees and students. A bunch of team members got the idea to hold trivia on a regular basis and created a webpage to manage the trivia app and play the game. The aim of the project was to create an API that will allow Udacity employees to play the trivia game so they can test their knowledge in a range of topics.
 
 All backend code follows PEP8 style guidelines.
 
-##Getting Started
+#Getting Started
 Pre- requisites and Local Development
-Developers using this project should already have Python3, pip and node installed on their local machines. Follow instructions to install the latest version of python for your platform in the (python docs)
+Developers using this project should already have Python3, pip and node installed on their local machines. Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
-###Virtual Environment
-Ensure you have a virtual environment set up and running, this keeps your dependencies for each project separate and organised. Instructions for setting up a virtual environment for your platform can be found in the (python docs).
+**Virtual Environment**
+Ensure you have a virtual environment set up and running, this keeps your dependencies for each project separate and organised. Instructions for setting up a virtual environment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
 
-###PIP Dependencies
+**PIP Dependencies**
 Once you have your virtual environment setup and running, install dependencies by navigating to the `/backend` directory and running:
 
 `bash
@@ -22,12 +22,12 @@ pip install -r requirements.txt
 
 This will install all of the required packages we selected within the `requirements.txt` file.
 
-###Key Dependencies
-1. (Flask) is a lightweight backend microservices framework. Flask is required to handle requests and responses.
-2. (SQLAlchemy) is the Python SQL toolkit and ORM you'll use to handle the lightweight sqlite database.
-3. (Flask-CORS) is the extension we'll use to handle cross origin requests from our frontend server.
+**Key Dependencies**
+1. [Flask](http://flask.pocoo.org/) is a lightweight backend microservices framework. Flask is required to handle requests and responses.
+2. [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM you'll use to handle the lightweight sqlite database.
+3. [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/# ) is the extension we'll use to handle cross origin requests from our frontend server.
 
-##Database Setup
+**Database Setup**
 Install and setup “PostgreSQL” on the system and create a database named ‘trivia’ in the Postgres server:
 
 `Createdb trivia`
@@ -38,7 +38,7 @@ With Postgres running, restore a database using the trivia.psql file provided. F
 psql trivia < trivia.psql`
 
 
-###Running the server
+**Running the server**
 From within the `backend` directory, first ensure you are working using your created virtual environment.
 
 To run the server, execute:
@@ -50,16 +50,16 @@ To run the server, execute:
 Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
 Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application.
 
-##Test
+**Test**
 `dropdb trivia_test
 createdb trivia_test
 psql trivia_test < trivia.psql
 python test_flaskr.py`
 
-##API Reference
+#API Reference
 Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, http://127.0.0.1:5000/ , which is set as a proxy in the frontend configuration.
 
-###Error Handling
+**Error Handling**
 Errors are returned as JSON objects in the following format:
 
 ``({
@@ -73,9 +73,10 @@ The API will return two error types when requests fail:
 - 404: Resources Not Found
 - 422: Not Processable
 
-###GET "/categories"
+**GET "/categories"**
 - Returns a list of categories objects, success value and total number of categories
-- Sample: ``curl http://127.0.0.1:5000/categories/``
+- Sample: >curl http://127.0.0.1:5000/categories/
+
 ``	{
   "categories": {
     "1": "Science",
@@ -90,7 +91,7 @@ The API will return two error types when requests fail:
 }
 ``
 
-###GET "/questions"
+**GET "/questions"***
 - Returns a list of questions, objects, success value and total number of  questions
 - Results are paginated in groups of 10, include a request argument to choose page number, starting from 1  
 - Sample: `curl http://127.0.0.1:5000/questions/?page=1`
@@ -143,7 +144,7 @@ The API will return two error types when requests fail:
   "total_questions": 23
 }
 ``
-###POST “/questions”
+**POST “/questions”**
 - Creates a new question using submitted question, answer, difficulty and category, Returns the id of the created question, success value, total questions, and question list based on current page number to update the frontend
 - Sample: ``curl X POST -H "Content-Type: application/json" -d '{"question": "Who won the Golden Boot at the 2018 World Cup?", "answer": "Harry Kane", "difficulty":"2", "category":"6"}' http://127.0.0.1:5000/questions/``
 
@@ -159,7 +160,7 @@ The API will return two error types when requests fail:
 }
 ``
 
-###GET “/categories/<int:category_id>/questions”
+**GET “/categories/<int:category_id>/questions”**
 - Returns a list of questions within a specific category
 - Sample: ``curl -X GET http://127.0.0.1:5000/categories/6/questions``
 
@@ -207,9 +208,9 @@ The API will return two error types when requests fail:
   "total_questions": 6
 }
 ``
-
-###Deletes a question from the database,
-Sample: ``curl -X DELETE http://127.0.0.1:5000/questions/28``
+**DELETE ‘'/questions/<int:question_id>'**
+- Deletes a question from the database,**
+- Sample: ``curl -X DELETE http://127.0.0.1:5000/questions/28``
 
 ``{
   "deleted": 28,
