@@ -230,7 +230,7 @@ def create_app(test_config=None):
                 "question": question
             })
         except:
-            abort(500, "An error occured while trying to load the next question")
+            abort(500, "Error loading question")
 
     '''
     @TODO:
